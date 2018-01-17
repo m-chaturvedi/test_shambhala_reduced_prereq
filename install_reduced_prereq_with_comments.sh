@@ -58,11 +58,16 @@ coinor-libipopt
 
 # libproj2 already there but the link is not provided
 libproj-dev
+
+
+# Doesn't install the .cmake file
+libpcl-dev
+libnlopt0
 EOF
 )
 
 # Install gtest
-apt-get install libgtest-dev
+apt-get --no-installeinstall libgtest-dev
 ls
 mkdir ~/gtest && cd ~/gtest && cmake /usr/src/gtest && make
 cp *.a /usr/local/lib

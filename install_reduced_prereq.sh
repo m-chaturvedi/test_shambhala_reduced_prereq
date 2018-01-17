@@ -7,37 +7,42 @@ if [[ "${EUID}" -ne 0 ]]; then
 fi
 
 apt update -y
-apt install --no-install-recommends software-properties-common cmake
+apt install --no-install-recommends -y git software-properties-common
 
 
 # Add the repository
-add-apt-repository ppa:dreal/dreal
+add-apt-repository -y ppa:dreal/dreal
+apt update -y
 
-apt install --no-install-recommends $(tr ' ' '\n' <<EOF
+apt install --no-install-recommends -y $(tr ' ' '\n' <<EOF
 
 bison
 build-essential
 cmake
-coinor-libipopt
+coinor-libipopt1v5
 flex
 git
 libboost-all-dev
 libgflags-dev
+libgtest-dev
 libibex-dev
+libnlopt0
+libpcl-dev
 libproj-dev
 libprotobuf-dev
 libtinyxml2-dev
 libtinyxml-dev
 libyaml-cpp-dev
+pkg-config
 protobuf-compiler
 EOF
 )
 
 # Install gtest
-apt-get install libgtest-dev
-ls
+apt-get install --no-install-recommends -y libgtest-dev
 mkdir ~/gtest && cd ~/gtest && cmake /usr/src/gtest && make
 cp *.a /usr/local/lib
+cd -
 
 curl -LO https://dl.bintray.com/dreal/dreal/dreal_4.17.12.2_amd64.deb
 trap 'rm -f dreal_4.17.12.2_amd64.deb' EXIT
