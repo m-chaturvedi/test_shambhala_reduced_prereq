@@ -1,0 +1,4 @@
+FROM ubuntu:16.04
+RUN mkdir /test_shambhala_reduced_prereq
+COPY . /test_shambhala_reduced_prereq
+# RUN cd /test_shambhala_reduced_prereq && bash shambhala_test_script.sh
