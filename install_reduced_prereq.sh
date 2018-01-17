@@ -39,7 +39,6 @@ EOF
 )
 
 # Install gtest
-apt-get install --no-install-recommends -y libgtest-dev
 mkdir ~/gtest && cd ~/gtest && cmake /usr/src/gtest && make
 cp *.a /usr/local/lib
 cd -
