@@ -7,10 +7,10 @@ make -j8
 cd /opt/drake/share/drake/examples
 
 # Check if pydrake can be imported
-export PYTHONPATH=/opt/drake/lib/python2.7/site-packages:/opt/drake/lib/python2.7/site-packages/vtk:${PYTHONPATH}:
+export PYTHONPATH=/opt/drake/lib/python2.7/site-packages:/opt/drake/lib/python2.7/site-packages/vtk:${PYTHONPATH-}:
 for pack_name in bot_core drake lcm optitrack pydrake robotlocomotion vtk; do
     echo $pack_name
-    python -c "import ${pack_name}; assert(${pack_name}.__file__ == '/opt/drake/lib/python2.7/site-packages/${pack_name}/__init__.pyc')"
+    python -c "import ${pack_name}; print(${pack_name}.__file__); assert(${pack_name}.__file__ == '/opt/drake/lib/python2.7/site-packages/${pack_name}/__init__.pyc')"
 done
 
 # find_resource problem persists #7774
