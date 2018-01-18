@@ -10,8 +10,8 @@ cd /opt/drake/share/drake/examples
 export PYTHONPATH=/opt/drake/lib/python2.7/site-packages:/opt/drake/lib/python2.7/site-packages/vtk:${PYTHONPATH-}:
 for pack_name in bot_core drake lcm optitrack pydrake robotlocomotion vtk; do
     echo $pack_name
-    python -c "import ${pack_name}; print(${pack_name}.__file__); assert(${pack_name}.__file__ == '/opt/drake/lib/python2.7/site-packages/${pack_name}/__init__.pyc')"
+    python -c "import ${pack_name}; import os; assert(os.path.dirname(${pack_name}.__file__) == '/opt/drake/lib/python2.7/site-packages/${pack_name}')"
 done
 
 # find_resource problem persists #7774
-./kuka_iiwa_arm/iiwa_wsg_simulation
+#./kuka_iiwa_arm/iiwa_wsg_simulation
