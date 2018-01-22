@@ -16,7 +16,6 @@ libboost-all-dev
 libgflags2v5
 libgl1-mesa-glx
 libhdf5-10
-libhdf5-10
 libibex-dev
 libjpeg8
 libnetcdf11
@@ -24,12 +23,14 @@ libnetcdf-c++4
 libnlopt0
 libpng12-0
 libprotobuf-dev
+libqt5multimedia5
 libtheora0
 libtiff5
 libtinyxml2-dev
 libtinyxml-dev
 libxt6
 libyaml-cpp0.5v5
+openjdk-8-jre
 pkg-config
 qtbase5-dev
 EOF

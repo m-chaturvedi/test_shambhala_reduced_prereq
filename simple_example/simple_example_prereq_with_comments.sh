@@ -56,3 +56,21 @@ curl https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.
 # 'libnetcdf.so.11', 'libtheoraenc.so.1'
 # Install libhdf5-10, libnetcdf11, libtheora0, libnetcdf-c++4
 
+# BINARY NOTES
+# drake-lcm-spy : Needs Java
+# drake-visualizer : error while loading shared libraries: libQt5Multimedia.so.5: cannot open shared object file: No such file or directory
+# lcm-gen: help runs fine
+# lcm-logger: help runs fine
+# lcm-logplayer: help runs fine
+# optitrack_client: help runs fine
+# vtkEncodeString-8.0: help runs fine
+# vtkHashSource-8.0: help runs fine
+# vtkParseJava-8.0: help runs fine
+# vtkWrapHierarchy-8.0: help runs fine
+# vtkWrapJava-8.0: help runs fine
+# vtkWrapPython-8.0: help runs fine
+# vtkWrapPythonInit-8.0: help runs fine
+# vtkWrapTcl-8.0: help runs fine
+# vtkWrapTclInit-8.0: help runs fine
+# vtkpython : Starts console
+
