@@ -23,6 +23,7 @@ libnetcdf-c++4
 libnlopt0
 libpng12-0
 libprotobuf-dev
+libqt5x11extras5
 libqt5multimedia5
 libtheora0
 libtiff5
