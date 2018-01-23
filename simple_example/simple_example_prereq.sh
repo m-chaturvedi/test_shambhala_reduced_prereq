@@ -36,6 +36,20 @@ libyaml-cpp0.5v5
 openjdk-8-jre
 pkg-config
 qtbase5-dev
+
+libblas3-dev
+liblapack-dev
+libexpat1-dev
+libglib2.0-0
+libjsoncpp1
+libogg0
+libxml2
+
+python-gtk2
+python-lxml
+python-numpy
+python-scipy
+python-yaml
 EOF
 )
 
@@ -43,3 +57,9 @@ curl -LO https://dl.bintray.com/dreal/dreal/dreal_4.17.12.2_amd64.deb
 trap 'rm -f dreal_4.17.12.2_amd64.deb' EXIT
 echo '9347492e47a518ff78991e15fe9de0cff0200573091385e42940cdbf1fcf77a5  dreal_4.17.12.2_amd64.deb' | sha256sum -c
 dpkg -i dreal_4.17.12.2_amd64.deb
+
+# Installed automatically but still listed explicitly:
+# libblas3-dev, liblapack3-dev, libexpat1-dev, libglib2.0-0, libjsoncpp1, libogg0, libxml2
+
+# Not needed for simple_example but installed because we expect them to be needed:
+# python-gtk2, python-lxml, python-numpy, python-scipy, python-yaml
