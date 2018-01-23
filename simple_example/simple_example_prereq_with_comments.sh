@@ -74,3 +74,13 @@ curl https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.
 # vtkWrapTclInit-8.0: help runs fine
 # vtkpython : Starts console
 
+
+# VTK starts with some error messages
+#process 10717: d-bus library appears to be incorrectly set up; failed to read machine uuid: uuid file '/etc/machine-id' should contain a hex string of length 32, not length 0, with no other text
+#see the manual page for dbus-uuidgen to correct this issue.
+#libgl error: mesa-loader: failed to retrieve device information
+#libgl error: version 4 or later of flush extension not found
+#libgl error: failed to load driver: i915
+#libgl error: failed to open drm device: no such file or directory
+#libgl error: failed to load driver: i965
+
