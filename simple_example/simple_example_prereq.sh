@@ -5,6 +5,9 @@ apt install --no-install-recommends -y software-properties-common
 add-apt-repository -y ppa:dreal/dreal
 apt update -y
 
+# TODO: May need to remove libtinyxml-dev
+# https://github.com/RobotLocomotion/drake/pull/7828
+
 apt install -y --no-install-recommends $(tr '\n' ' ' <<EOF
 
 bison
@@ -12,7 +15,6 @@ build-essential
 cmake
 coinor-libipopt1v5
 flex
-libboost-all-dev
 libgflags2v5
 libgl1-mesa-glx
 libhdf5-10
